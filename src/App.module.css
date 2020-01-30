@@ -1,0 +1,113 @@
+/* Global styles here */
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.row {
+  height: 100%;
+  overflow-y: scroll;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.mainContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: scroll;
+  z-index: 0;
+}
+
+:global {
+  .atlwdg-trigger.atlwdg-TOP {
+    z-index: 1000;
+  }
+
+  .flex {
+    display: flex;
+
+    &.flexRow {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &.flexCol {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &.flexColNoHeight {
+      flex-direction: column;
+    }
+
+    &.alignStart {
+      align-items: flex-start;
+    }
+
+    &.between {
+      justify-content: space-between;
+    }
+
+    &.justifyCenter {
+      justify-content: center;
+    }
+
+    &.alignStart {
+      align-items: flex-start;
+    }
+
+    &.alignBaseline {
+      align-items: baseline;
+    }
+
+    &.alignEnd {
+      align-items: end;
+    }
+  }
+
+  .flex1 {
+    flex: 1;
+  }
+
+  .flex4 {
+    flex: 4;
+  }
+  .flex5 {
+    flex: 5;
+  }
+
+  /* Basic reset css */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #1785ec;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+}

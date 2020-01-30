@@ -1,0 +1,348 @@
+.heroImage {
+/*  background-image: linear-gradient(to right, rgba(23, 15, 69, 0.5), rgba(236, 236, 236, 0.8)), url('../../images/architecture-buildings-city.jpg');*/
+  height: 850px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .loginFormWrapper {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: inherit;
+  }
+
+  .heroTextBlock {
+    /*flex: 0 1 58.33%;*/
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 64px;
+  }
+
+  /* .loginFormBlock{
+        flex: 0 1 25%;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;*/
+
+  .loginForm {
+    flex: 0 1 500px;
+    height: 375px;
+    position: relative;
+    z-index: 100;
+    margin: 12px;
+    /* padding: 12px; */
+    padding: 35px 0 50px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    min-height: 216px;
+
+    fieldset {
+      border: none;
+      margin-top: 24px;
+      padding: 0 64px;
+
+      button {
+        width: 75%;
+        margin-top: 12px;
+      }
+
+      a {
+        color: #0066cc;
+        text-decoration: none;
+        padding: 0 5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    legend {
+      color: #3e2bc4;
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 12px;
+      width: 75%;
+      text-align: center;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+
+      span {
+        width: 75px;
+      }
+
+      input[type='text'],
+      select,
+      input[type='password'] {
+        margin-left: 10px;
+
+        &.errorInput {
+          border: 1px solid red;
+        }
+      }
+
+      input[type='checkbox'] {
+        margin-right: 10px;
+      }
+    }
+
+    button {
+      height: 26px;
+      color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(0, 0, 0, 0.26);
+      background-color: #3e2bc4;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.12);
+      padding: 0 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 3px;
+      cursor: pointer;
+      font: inherit;
+    }
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15px;
+    justify-content: flex-start;
+
+    &.spaceBetween {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &.spaceAround {
+      justify-content: space-around;
+    }
+
+    &.spaceEvenly {
+      justify-content: space-evenly;
+    }
+
+    &.center {
+      justify-content: center;
+    }
+  }
+
+  .errorMessage {
+    /*background-color: #ff000070;*/
+    padding: 5px;
+    /*border: 2px solid red;*/
+    font-weight: 600;
+    color: red;
+  }
+
+  /*Hides arrows on number input*/
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    width: 75px;
+    height: 34px;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  input[type='text'],
+  input[type='password'] {
+    width: 200px;
+    height: 34px;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  /* }*/
+
+  select {
+    line-height: 30px;
+  }
+}
+
+.loginWrapper {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  height: 100vh;
+  min-width: 700px;
+
+  .login {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    form {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .error,
+      .hint {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .error {
+        color: #c70202;
+        padding: 20px 0 0 15px;
+
+        &.hidden {
+          visibility: hidden;
+        }
+      }
+
+      .hint {
+        color: #333333;
+      }
+
+      &.setForm {
+        button {
+          margin-top: 0px;
+        }
+
+        h2 {
+          margin-bottom: 66px;
+        }
+      }
+
+      &.expireForm {
+        button {
+          margin: 0;
+        }
+
+        .buttonRow {
+          margin-top: 30px;
+        }
+      }
+
+      &.changeForm {
+        button {
+          margin: 20px 0;
+        }
+      }
+
+      .date {
+        font-size: 24px;
+        margin-bottom: 88px;
+
+        .data {
+          font-weight: 600;
+          padding: 0 12px;
+        }
+      }
+
+      > div {
+        *:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    :global(.flexRow) {
+      > div {
+        margin-right: 5px;
+      }
+
+      button:first-of-type:not(:last-of-type) {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .passwordExpire {
+    min-height: 350px;
+  }
+
+  button {
+    margin-top: 24px;
+
+    &.secondary {
+      background-color: white;
+      border: 1px solid #333333;
+      color: #999999;
+      margin-left: 12px;
+    }
+  }
+
+  .flexBetween {
+    justify-content: space-between;
+  }
+
+  p {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+
+    .attention {
+      font-weight: 600;
+
+      &:first-of-type {
+        margin-right: 8px;
+      }
+
+      &:last-of-type {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .fsvLogo {
+    margin-bottom: 11px;
+    width: 189px;
+    height: auto;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+    font-weight: normal;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-top: 13px;
+  }
+}
+
+.loginAccent {
+  height: 100vh;
+  flex: 0 1 480px;
+}
